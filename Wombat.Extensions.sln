@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33423.256
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wombat.Extensions.ObjectConversion", "Wombat.Extensions.ObjectConversion\Wombat.Extensions.ObjectConversion.csproj", "{C9488FA1-6729-492E-9AD2-6D59E1B1BC38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9488FA1-6729-492E-9AD2-6D59E1B1BC38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9488FA1-6729-492E-9AD2-6D59E1B1BC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9488FA1-6729-492E-9AD2-6D59E1B1BC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9488FA1-6729-492E-9AD2-6D59E1B1BC38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBB92292-016A-43CE-A388-38B1154B1161}
+	EndGlobalSection
+EndGlobal
