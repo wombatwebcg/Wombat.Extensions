@@ -1,7 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageProjectUrl>https://github.com/wombatwebcg/Wombat.Extensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/wombatwebcg/Wombat.Extensions</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>extensions;object</PackageTags>
+    <Authors>Wombat</Authors>
+    <Company>Wombat</Company>
+    <Product>Wombat</Product>
+    <Description>通用对象类型转换扩展库</Description>
   </PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
