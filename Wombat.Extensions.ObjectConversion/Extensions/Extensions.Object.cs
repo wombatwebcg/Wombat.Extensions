@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.ComponentModel;
+using System.IO;
 using System.Reflection;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Wombat
 {
@@ -57,9 +59,15 @@ namespace Wombat
         public static T DeepClone<T>(this T obj) where T : class
         {
             if (obj == null)
-                return null;
+                return default(T);
 
-            return obj.ToJson().ToObject<T>();
+            BinaryFormatter formatter = new BinaryFormatter();
+            using (MemoryStream stream = new MemoryStream())
+            {
+                formatter.Serialize(stream, obj);
+                stream.Seek(0, SeekOrigin.Begin);
+                return (T)formatter.Deserialize(stream);
+            }
         }
 
         /// <summary>
