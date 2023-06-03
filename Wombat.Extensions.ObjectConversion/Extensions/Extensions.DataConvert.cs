@@ -15,7 +15,7 @@ namespace Wombat
         /// </summary>
         /// <param name="byteArray"></param>
         /// <returns></returns>
-        public static string ByteArrayToString(this byte[] byteArray)
+        public static string ToHexString(this byte[] byteArray)
         {
             return string.Join(" ", byteArray.Select(t => t.ToString("X2")));
         }
@@ -26,7 +26,7 @@ namespace Wombat
         /// <param name="str"></param>
         /// <param name="strict">严格模式（严格按两个字母间隔一个空格）</param>
         /// <returns></returns>
-        public static byte[] StringToByteArray(this string str, bool strict = true)
+        public static byte[] HexStringToBytes(this string str, bool strict = true)
         {
             if (string.IsNullOrWhiteSpace(str) || str.Trim().Replace(" ", "").Length % 2 != 0)
                 throw new ArgumentException("请传入有效的参数");
@@ -54,7 +54,7 @@ namespace Wombat
         /// <param name="str"></param>
         /// <param name="strict"></param>
         /// <returns></returns>
-        public static byte[] AsciiStringToByteArray(this string str, bool strict = true)
+        public static byte[] AsciiStringToBytes(this string str, bool strict = true)
         {
             if (string.IsNullOrWhiteSpace(str) || str.Trim().Replace(" ", "").Length % 2 != 0)
                 throw new ArgumentException("请传入有效的参数");
@@ -66,7 +66,7 @@ namespace Wombat
                 {
                     stringList.Add(((char)(Convert.ToByte(item, 16))).ToString());
                 }
-                return StringToByteArray(string.Join("", stringList), false);
+                return HexStringToBytes(string.Join("", stringList), false);
             }
             else
             {
@@ -77,7 +77,7 @@ namespace Wombat
                     var stringAscii = str[i].ToString() + str[++i].ToString();
                     stringList.Add(((char)Convert.ToByte(stringAscii, 16)).ToString());
                 }
-                return StringToByteArray(string.Join("", stringList), false);
+                return HexStringToBytes(string.Join("", stringList), false);
             }
         }
 
@@ -97,7 +97,7 @@ namespace Wombat
             {
                 stringList.Add(((char)item).ToString());
             }
-            return StringToByteArray(string.Join("", stringList), false);
+            return HexStringToBytes(string.Join("", stringList), false);
         }
 
         /// <summary>

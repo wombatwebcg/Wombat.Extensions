@@ -58,21 +58,21 @@ namespace Wombat
             return builder.ToString();
         }
 
-        /// <summary>
-        /// Byte数组转为对应的16进制字符串
-        /// </summary>
-        /// <param name="bytes">Byte数组</param>
-        /// <returns></returns>
-        public static string To0XString(this byte[] bytes)
-        {
-            StringBuilder resStr = new StringBuilder();
-            bytes.ToList().ForEach(aByte =>
-            {
-                resStr.Append(aByte.ToString("x2"));
-            });
+        ///// <summary>
+        ///// Byte数组转为对应的16进制字符串
+        ///// </summary>
+        ///// <param name="bytes">Byte数组</param>
+        ///// <returns></returns>
+        //public static string To0XString(this byte[] bytes)
+        //{
+        //    StringBuilder resStr = new StringBuilder();
+        //    bytes.ToList().ForEach(aByte =>
+        //    {
+        //        resStr.Append(aByte.ToString("x2"));
+        //    });
 
-            return resStr.ToString();
-        }
+        //    return resStr.ToString();
+        //}
 
         /// <summary>
         /// Byte数组转为对应的16进制字符串
@@ -81,7 +81,7 @@ namespace Wombat
         /// <returns></returns>
         public static string To0XString(this byte aByte)
         {
-            return new byte[] { aByte }.To0XString();
+            return new byte[] { aByte }.ToHexString();
         }
 
         /// <summary>
