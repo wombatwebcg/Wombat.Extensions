@@ -3,7 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>wombatwebcg</Authors>
-    <Product>wombatwebcg</Product>
+    <Product>Wombat.Extensions.DataTypeExtensions</Product>
+    <PackageTags>extensions;object</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <Description>对象转换扩展库</Description>
+    <Copyright>wombatwebcg</Copyright>
   </PropertyGroup>
 
 
