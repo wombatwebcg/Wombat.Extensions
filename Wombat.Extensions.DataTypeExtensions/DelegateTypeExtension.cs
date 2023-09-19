@@ -1,12 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace Wombat
+namespace Wombat.Extensions.DataTypeExtensions
 {
-    /// <summary>
-    /// 拓展方法静态类
-    /// </summary>
-    public static partial class Extensions
+   public static partial class DataTypeExtensions
     {
         /// <summary>
         /// 异步，按顺序执行第一个方法和第二个方法
@@ -39,5 +38,6 @@ namespace Wombat
             firstTask.Start();
             firstTask.ContinueWith(x => next(x.Result));
         }
+
     }
 }

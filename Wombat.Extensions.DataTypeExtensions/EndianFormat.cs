@@ -1,4 +1,4 @@
-﻿namespace Wombat
+﻿namespace Wombat.Extensions.DataTypeExtensions
 {
     /// <summary>
     /// 字节格式

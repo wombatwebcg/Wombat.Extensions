@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Wombat
+namespace Wombat.Extensions.DataTypeExtensions
 {
-    public static partial class Extensions
+    public static partial class DataTypeExtensions
     {
         ///   <summary> 
         ///  获取某一日期是该年中的第几周

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Wombat
+namespace Wombat.Extensions.DataTypeExtensions
 {
-    public static partial class Extensions
+    public static partial class DataTypeExtensions
     {
         /// <summary>
         /// int转Ascll字符

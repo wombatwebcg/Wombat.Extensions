@@ -2,12 +2,12 @@
 using System.ComponentModel;
 using System.Linq;
 
-namespace Wombat
+namespace Wombat.Extensions.DataTypeExtensions
 {
     /// <summary>
     /// 拓展类
     /// </summary>
-    public static partial class Extensions
+    public static partial class DataTypeExtensions
     {
         /// <summary>
         /// 获取枚举描述

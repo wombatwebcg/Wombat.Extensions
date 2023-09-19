@@ -2,17 +2,18 @@
 using Newtonsoft.Json.Serialization;
 using System;
 
-namespace Wombat
+namespace Wombat.Extensions.DataTypeExtensions
 {
     /// <summary>
     /// 拓展类
     /// </summary>
-    public static class JsonExtensions
+    public static class JsonTypeExtension
     {
-        static JsonExtensions()
+        static JsonTypeExtension()
         {
             JsonConvert.DefaultSettings = () => DefaultJsonSetting;
         }
+
         public static JsonSerializerSettings DefaultJsonSetting = new JsonSerializerSettings
         {
             ContractResolver = new DefaultContractResolver(),

@@ -4,9 +4,9 @@ using System.Data;
 using System.Reflection;
 using System.Text;
 
-namespace Wombat
+namespace Wombat.Extensions.DataTypeExtensions
 {
-    public static partial class Extensions
+    public static partial class DataTypeExtensions
     {
         /// <summary>
         /// DataTable转List

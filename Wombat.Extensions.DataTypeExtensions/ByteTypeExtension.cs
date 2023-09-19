@@ -2,12 +2,12 @@
 using System.Linq;
 using System.Text;
 
-namespace Wombat
+namespace Wombat.Extensions.DataTypeExtensions
 {
     /// <summary>
     /// 拓展类
     /// </summary>
-    public static partial class Extensions
+    public static partial class DataTypeExtensions
     {
 
         /// <summary>
@@ -971,6 +971,7 @@ namespace Wombat
          private static byte[] ByteToDataFormat4( byte[] value, int index = 0, EndianFormat format = EndianFormat.ABCD)
         {
             byte[] buffer = new byte[4];
+            if (value.Length - index < 4) { throw new Exception("字节转换时候目标源长度不足"); }
             switch (format)
             {
                 case EndianFormat.ABCD:

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
-namespace Wombat
+namespace Wombat.Extensions.DataTypeExtensions
 {
-    public static partial class Extensions
+    public static partial class DataTypeExtensions
     {
         /// <summary>
         /// 复制序列中的数据

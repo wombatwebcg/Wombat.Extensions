@@ -2,9 +2,9 @@
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wombat
+namespace Wombat.Extensions.DataTypeExtensions
 {
-    public static partial class Extensions
+    public static partial class DataTypeExtensions
     {
         /// <summary>
         /// 将流读为字符串

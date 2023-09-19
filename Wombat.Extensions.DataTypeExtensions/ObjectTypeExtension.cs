@@ -5,9 +5,9 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace Wombat
+namespace Wombat.Extensions.DataTypeExtensions
 {
-    public static partial class Extensions
+    public static partial class DataTypeExtensions
     {
         private static BindingFlags _bindingFlags { get; }
             = BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public | BindingFlags.Static;
@@ -28,27 +28,6 @@ namespace Wombat
             }
         }
 
-        /// <summary>
-        /// 实体类转json数据，速度快
-        /// </summary>
-        /// <param name="t">实体类</param>
-        /// <returns></returns>
-        public static string EntityToJson(this object t)
-        {
-            if (t == null)
-                return null;
-            string jsonStr = "";
-            jsonStr += "{";
-            PropertyInfo[] infos = t.GetType().GetProperties();
-            for (int i = 0; i < infos.Length; i++)
-            {
-                jsonStr = jsonStr + "\"" + infos[i].Name + "\":\"" + infos[i].GetValue(t).ToString() + "\"";
-                if (i != infos.Length - 1)
-                    jsonStr += ",";
-            }
-            jsonStr += "}";
-            return jsonStr;
-        }
 
         /// <summary>
         /// 深复制

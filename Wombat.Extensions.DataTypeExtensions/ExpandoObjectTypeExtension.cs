@@ -4,9 +4,9 @@ using System.Data;
 using System.Dynamic;
 using System.Linq;
 
-namespace Wombat
+namespace Wombat.Extensions.DataTypeExtensions
 {
-    public static partial class Extensions
+    public static partial class DataTypeExtensions
     {
         /// <summary>
         /// 添加属性

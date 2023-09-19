@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Wombat
+namespace Wombat.Extensions.DataTypeExtensions
 {
     /// <summary>
     /// 数据类型
