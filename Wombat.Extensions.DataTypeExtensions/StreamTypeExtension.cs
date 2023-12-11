@@ -15,8 +15,6 @@ namespace Wombat.Extensions.DataTypeExtensions
         /// <returns></returns>
         public static async Task<string> ReadToStringAsync(this Stream stream, Encoding encoding = null)
         {
-            int sss = 1;
-            sss.ToAscllStr();
             if (!stream.CanRead)
             {
                 return string.Empty;

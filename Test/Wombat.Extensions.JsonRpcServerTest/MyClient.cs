@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO.Pipelines;
 using System.Net;
+using System.Net.Sockets;
 using System.Threading.Tasks;
 using Wombat.Extensions.JsonRpc.Client;
 
@@ -12,10 +14,11 @@ namespace Wombat.Extensions.JsonRpcServerTest
 
         public static async Task<JsonRpcClient> ConnectAsync(int port)
         {
-#if false
+#if true
+            PipeOptions.Default, client.GetStream()
             var client = new TcpClient();
             await client.ConnectAsync("127.0.0.1", port);
-            return new JsonRpcClient(new StreamDuplexPipe(PipeOptions.Default, client.GetStream())) {
+            return new JsonRpcClient(new Pipe(new PipeOptions { })) {
                 Timeout = Debugger.IsAttached ? TimeSpan.FromHours(1) : TimeSpan.FromSeconds(1)
             };
 #else
