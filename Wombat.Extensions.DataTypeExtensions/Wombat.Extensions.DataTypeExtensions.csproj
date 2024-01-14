@@ -8,13 +8,12 @@
     <RepositoryType>git</RepositoryType>
     <Description>对象转换扩展库</Description>
     <Copyright>wombatwebcg</Copyright>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
 
 	
 	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="System.Memory" Version="4.5.5" />
+		<PackageReference Include="Newtonsoft.Json" Version="[13.0.0,)" />
 	</ItemGroup>
 </Project>
