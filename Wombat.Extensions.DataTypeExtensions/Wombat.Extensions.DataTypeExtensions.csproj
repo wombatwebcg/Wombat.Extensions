@@ -8,7 +8,7 @@
     <RepositoryType>git</RepositoryType>
     <Description>对象转换扩展库</Description>
     <Copyright>wombatwebcg</Copyright>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
 
