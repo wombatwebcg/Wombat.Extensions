@@ -9,13 +9,13 @@ namespace Wombat.Extensions.DataTypeExtensions
         /// </summary>
         /// <param name="ascllCode"></param>
         /// <returns></returns>
-        public static string ToAscllStr(this int ascllCode)
+        public static string ToASCIIString(this int ascllCode)
         {
             if (ascllCode >= 0 && ascllCode <= 255)
             {
-                System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
+                System.Text.ASCIIEncoding ASCIIEncoding = new System.Text.ASCIIEncoding();
                 byte[] byteArray = new byte[] { (byte)ascllCode };
-                string strCharacter = asciiEncoding.GetString(byteArray);
+                string strCharacter = ASCIIEncoding.GetString(byteArray);
                 return (strCharacter);
             }
             else

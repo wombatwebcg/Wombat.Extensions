@@ -58,28 +58,28 @@ namespace Wombat.Extensions.DataTypeExtensions
             return builder.ToString();
         }
 
-        ///// <summary>
-        ///// Byte数组转为对应的16进制字符串
-        ///// </summary>
-        ///// <param name="bytes">Byte数组</param>
-        ///// <returns></returns>
-        //public static string To0XString(this byte[] bytes)
-        //{
-        //    StringBuilder resStr = new StringBuilder();
-        //    bytes.ToList().ForEach(aByte =>
-        //    {
-        //        resStr.Append(aByte.ToString("x2"));
-        //    });
+        /// <summary>
+        /// Byte数组转为对应的16进制字符串
+        /// </summary>
+        /// <param name="bytes">Byte数组</param>
+        /// <returns></returns>
+        public static string ToHexString(this byte[] bytes)
+        {
+            StringBuilder resStr = new StringBuilder();
+            bytes.ToList().ForEach(aByte =>
+            {
+                resStr.Append(aByte.ToString("x2"));
+            });
 
-        //    return resStr.ToString();
-        //}
+            return resStr.ToString();
+        }
 
         /// <summary>
         /// Byte数组转为对应的16进制字符串
         /// </summary>
         /// <param name="aByte">一个Byte</param>
         /// <returns></returns>
-        public static string To0XString(this byte aByte)
+        public static string ToHexString(this byte aByte)
         {
             return new byte[] { aByte }.ToHexString();
         }
@@ -152,7 +152,7 @@ namespace Wombat.Extensions.DataTypeExtensions
         /// <returns>bool数组</returns>
         public static bool[] ToBool(this byte[] buffer, int index, int length, bool reverse = false)
         {
-            int realLength = (int)Math.Ceiling((length) * 1.0 / 8);
+            int realLength = (int)Math.Ceiling(length / 8.0);
             byte[] temp = new byte[realLength];
             int bufferLength = buffer.Length - index;
             if (bufferLength <= realLength)

@@ -25,7 +25,7 @@ namespace Wombat.Extensions.DataTypeExtensions
         /// </summary>
         /// <param name="byteArray"></param>
         /// <returns></returns>
-        public static string ToHexString(this byte[] byteArray)
+        public static string ToHexStringWithSpace(this byte[] byteArray)
         {
             return string.Join(" ", byteArray.Select(t => t.ToString("X2")));
         }
@@ -59,12 +59,12 @@ namespace Wombat.Extensions.DataTypeExtensions
         }
 
         /// <summary>
-        /// Asciis字符串数组字符串装字节数组
+        /// ASCIIs字符串数组字符串装字节数组
         /// </summary>
         /// <param name="str"></param>
         /// <param name="strict"></param>
         /// <returns></returns>
-        public static byte[] AsciiStringToBytes(this string str, bool strict = true)
+        public static byte[] ASCIIStringToBytes(this string str, bool strict = true)
         {
             if (string.IsNullOrWhiteSpace(str) || str.Trim().Replace(" ", "").Length % 2 != 0)
                 throw new ArgumentException("请传入有效的参数");
@@ -84,20 +84,20 @@ namespace Wombat.Extensions.DataTypeExtensions
                 var stringList = new List<string>();
                 for (int i = 0; i < str.Length; i++)
                 {
-                    var stringAscii = str[i].ToString() + str[++i].ToString();
-                    stringList.Add(((char)Convert.ToByte(stringAscii, 16)).ToString());
+                    var stringASCII = str[i].ToString() + str[++i].ToString();
+                    stringList.Add(((char)Convert.ToByte(stringASCII, 16)).ToString());
                 }
                 return HexStringToBytes(string.Join("", stringList), false);
             }
         }
 
         /// <summary>
-        /// Asciis数组字符串装字节数组
+        /// ASCIIs数组字符串装字节数组
         /// 如：30 31 =》 00 01
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
-        public static byte[] AsciiArrayToByteArray(this byte[] str)
+        public static byte[] ASCIIArrayToByteArray(this byte[] str)
         {
             if (!str?.Any() ?? true)
                 throw new ArgumentException("请传入有效的参数");
@@ -111,12 +111,12 @@ namespace Wombat.Extensions.DataTypeExtensions
         }
 
         /// <summary>
-        /// 字节数组转换成Ascii字节数组
+        /// 字节数组转换成ASCII字节数组
         /// 如：00 01 => 30 31
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
-        public static byte[] ByteArrayToAsciiArray(this byte[] str)
+        public static byte[] ByteArrayToASCIIArray(this byte[] str)
         {
             return Encoding.ASCII.GetBytes(string.Join("", str.Select(t => t.ToString("X2"))));
         }

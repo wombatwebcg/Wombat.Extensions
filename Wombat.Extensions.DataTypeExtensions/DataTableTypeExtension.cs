@@ -87,7 +87,7 @@ namespace Wombat.Extensions.DataTypeExtensions
         /// </summary>
         /// <param name="dt">数据表</param>
         /// <returns>返回标准的CSV</returns>
-        public static string ToCsvStr(this DataTable dt)
+        public static string ToCsvString(this DataTable dt)
         {
             //以半角逗号（即,）作分隔符，列为空也要表达其存在。
             //列内容如存在半角逗号（即,）则用半角引号（即""）将该字段值包含起来。
